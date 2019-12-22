@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "148032902018",
+    "firebase_url": "https://kahata-d7ed2.firebaseio.com",
+    "project_id": "kahata-d7ed2",
+    "storage_bucket": "kahata-d7ed2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148032902018:android:12ff5ab8e4ecc86371759b",
+        "android_client_info": {
+          "package_name": "com.rebex.account_khata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148032902018-k7lk5i7lug87v9d66elu7s1gebls3ft6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rebex.account_khata",
+            "certificate_hash": "1d204cb84a0fb2ce11f2cfce036c4bf97a58fe73"
+          }
+        },
+        {
+          "client_id": "148032902018-tbqiqt3u766k3muncon365mg9mbj7g0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxKoNf8mD-HamRYDz9xPJYqjdtECZzbDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148032902018-tbqiqt3u766k3muncon365mg9mbj7g0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
