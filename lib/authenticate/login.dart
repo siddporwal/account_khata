@@ -39,7 +39,7 @@ class _login_pageState extends State<login_page> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       Text('Login',
                           style:TextStyle(
