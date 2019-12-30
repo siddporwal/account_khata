@@ -1,8 +1,8 @@
 class UserProfile{
-  final String Firstname;
-  final String Lastname;
+  final String firstname;
+  final String lastname;
   final String mobile;
   UserProfile({
-    this.Firstname,this.Lastname,this.mobile
+    this.firstname,this.lastname,this.mobile
 });
 }

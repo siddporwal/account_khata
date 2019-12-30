@@ -14,7 +14,7 @@ class _Profile_detailsState extends State<Profile_details> {
   @override
   Widget build(BuildContext context) {
     Constants.mContext=context;
-    final profile= Provider.of<List<UserProfile>>(Constants.mContext);
+    final profile= Provider.of<List<UserProfile>>(Constants.mContext) ?? [];
 
     return Expanded(
 
