@@ -1,4 +1,4 @@
-import 'package:account_khata/Home.dart';
+import 'package:account_khata/home/Home.dart';
 import 'package:account_khata/authenticate/login.dart';
 import 'package:account_khata/shared/constants.dart';
 import 'package:flutter/material.dart';

@@ -2,7 +2,7 @@ import 'user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'authenticate/login.dart';
-import 'package:account_khata/Home.dart';
+import 'package:account_khata/home/Home.dart';
 
 class Wrapper extends StatelessWidget {
   @override
