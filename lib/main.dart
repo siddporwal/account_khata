@@ -1,8 +1,6 @@
+import 'package:account_khata/wrapper.dart';
 import 'package:flutter/material.dart';
-import 'wrapper.dart';
-import 'package:provider/provider.dart';
-import 'services/auth.dart';
-import 'user.dart';
+
 
 
 void main() => runApp(MaterialApp(
@@ -12,11 +10,9 @@ void main() => runApp(MaterialApp(
 class khata extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<User>.value(
-      value: AuthService().user,
-      child: MaterialApp(
+    return MaterialApp(
         home: Wrapper(),
-      ),
+
     );
   }
 }
