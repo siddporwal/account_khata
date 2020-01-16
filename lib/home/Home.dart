@@ -94,12 +94,12 @@ class _HomeState extends State<Home> {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             // Add one stop for each color. Stops should increase from 0 to 1
-            stops: [0.2, 0.7],
+            stops: [0.2, 0.9],
             colors: [
-              Color(0xff00b2bb),
-              Color(0xff79d2a6),
-              //Colors.blue[400],
-              //Colors.blue[300],
+             // Color(0xff00b2bb),
+              //Color(0xff79d2a6),
+              Colors.blue[600],
+              Colors.blue[900],
             ],
             // stops: [0.0, 0.1],
           ),

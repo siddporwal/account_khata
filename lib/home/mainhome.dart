@@ -1,6 +1,7 @@
+import 'package:account_khata/data/add_bill.dart';
+import 'package:account_khata/data/add_customer.dart';
 import 'package:account_khata/home/fab_bottom_app_bar.dart';
 import 'package:account_khata/home/fab_with_icons.dart';
-import 'package:account_khata/home/layout.dart';
 import 'package:account_khata/home/spending.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -20,7 +21,6 @@ class _MainHomeState extends State<MainHome> {
       _lastSelected = 'TAB: $index';
     });
   }
-
   void _selectedFab(int index) {
     setState(() {
       _lastSelected = 'FAB: $index';
@@ -38,7 +38,7 @@ class _MainHomeState extends State<MainHome> {
   Widget build(BuildContext context) {
     Constants.mContext=context;
     return Scaffold(
-      bottomNavigationBar:FABBottomAppBar(
+      bottomNavigationBar: FABBottomAppBar(
         color: Colors.grey,
         selectedColor: Colors.red,
         notchedShape: CircularNotchedRectangle(),
@@ -51,12 +51,8 @@ class _MainHomeState extends State<MainHome> {
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {_buildFab(context); },
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-        elevation: 2.0,
-      ),
+      floatingActionButton: _buildFab(
+          context), // This trailing comma makes auto-formatting nicer for build methods.
       body: SingleChildScrollView(
         child:
         Stack(
@@ -79,20 +75,16 @@ class _MainHomeState extends State<MainHome> {
                       begin: Alignment.topLeft,
                       end: Alignment.topRight,
                       // Add one stop for each color. Stops should increase from 0 to 1
-                      stops: [0.2, 0.7],
+                      stops: [0.2, 0.9],
                       colors: [
-                        Color(0xff00b2bb),
-                        Color(0xff79d2a6),
-                        //Colors.blue[400],
-                        //Colors.blue[300],
+                        Colors.blue[600],
+                        Colors.blue[900],
                       ],
                       // stops: [0.0, 0.1],
                     ),
                   ),
-
                   height: MediaQuery.of(context).size.height * .10,
                   padding: EdgeInsets.only(top: 20, left: 30, right: 20),
-
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height * .75,
@@ -100,7 +92,6 @@ class _MainHomeState extends State<MainHome> {
                 ),
               ],
             ),
-
             Container(
               alignment: Alignment.topCenter,
               padding: new EdgeInsets.only(
@@ -135,9 +126,6 @@ class _MainHomeState extends State<MainHome> {
                         amount: r"$200.00",
                       ),
                     ),
-
-
-
                   ],
                 ),
               ),
@@ -151,36 +139,55 @@ class _MainHomeState extends State<MainHome> {
                 bottom: 50.0,
               ),
               child: new Container(
-
-
                 child:  Container(
                   //padding: EdgeInsets.only(left: 10.0),
                   child: Duebills(),
                 ),
-
               ),
             ),
-
-
           ],
         ),
       ),
     );
   }
   Widget _buildFab(BuildContext context) {
-    final icons = [ Icons.payment, Icons.perm_identity];
-    return AnchoredOverlay(
-      showOverlay: true,
-      overlayBuilder: (context, offset) {
-        return CenterAbout(
-          position: Offset(offset.dx, offset.dy - icons.length * 35.0),
-          child: FabWithIcons(
-            icons: icons,
-            onIconTapped: _selectedFab,
-          ),
-        );
+
+    final icons = [ Icons.receipt, Icons.person,];
+
+    return FabWithIcons(
+
+      icons: icons,
+
+      onIconTapped: (index) {
+
+        switch(index){
+          case 0:
+            print('indexx ${index.toString()}');
+
+            Navigator.push(context,
+                MaterialPageRoute(builder:(context) =>Add_Bill()));
+
+            break;
+          case 1:
+            print('indexx ${index.toString()}');
+
+            Navigator.push(context,
+                MaterialPageRoute(builder:(context) =>Add_Customer()));
+
+            break;
+          default:
+            print('degausnhdf');
+
+            break;
+        }
+       /*Navigator.push(Constants.mContext,
+            MaterialPageRoute(builder:(context) =>Add_Bill()));
+        Navigator.push(Constants.mContext,
+            MaterialPageRoute(builder:(context) =>Add_Customer()));*/
+
       },
 
     );
+
   }
 }

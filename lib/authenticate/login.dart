@@ -107,15 +107,14 @@ class _login_pageState extends State<login_page> {
           decoration: BoxDecoration(
 
             gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              // Add one stop for each color. Stops should increase from 0 to 1
-              stops: [0.2, 0.7],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft, // Add one stop for each color. Stops should increase from 0 to 1
+              stops: [0.2, 0.9],
               colors: [
-                Color(0xff00b2bb),
-                Color(0xff79d2a6),
-                //Colors.blue[400],
-                //Colors.blue[300],
+                /*Color(0xff00b2bb),
+                Color(0xff79d2a6),*/
+                Colors.blue[600],
+                Colors.blue[900],
               ],
               // stops: [0.0, 0.1],
             ),
@@ -224,11 +223,8 @@ class _login_pageState extends State<login_page> {
                   },
                 ),
                 SizedBox(height: 10,),
-                /*Text(error,
-                  style: TextStyle(color:Colors.red,
-                      fontSize: 15.0
-                  ),),*/
-                SizedBox(height: 100,),
+
+                SizedBox(height: 125,),
                 GestureDetector(
                   child: Text('Forgot Password',style: TextStyle(fontSize: 15,fontWeight:FontWeight.bold,color: Colors.orange[800]),),
                   onTap: (){
@@ -247,7 +243,7 @@ class _login_pageState extends State<login_page> {
                     GestureDetector(
                       child: Text('Register',style: TextStyle(fontSize: 15,fontWeight:FontWeight.bold,color: Colors.orange[800]),),
                       onTap: (){
-                        Navigator.pop(Constants.mContext,
+                        Navigator.pushReplacement(Constants.mContext,
                             MaterialPageRoute(builder:(context) =>register_now()));
                       },
                     )

@@ -5,6 +5,8 @@ class Constants {
   static final String LOGIN_URL = BaseURL+"/login";
   static final String SIGNUP_URL = BaseURL+"/registration";
   static final String PROFILE = BaseURL+"/updateprofile";
+  static final String BILL = BaseURL+"/addbill";
+  static final String CUSTOMER = BaseURL+"/addcustomer";
   // SESSION PARAMETER
 
   static final String LOGIN_STATUS="LOGIN_STATUS";

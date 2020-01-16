@@ -14,27 +14,33 @@ class _LogoutState extends State<Logout> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _incrementCounter();
+    _signout();
   }
 
-  _signout() {
+  _signout() async{
+    prefs = await SharedPreferences.getInstance();
+
     setState(() {
 
       prefs.setString(Constants.LOGIN_STATUS,"FALSE");
     });
-    Navigator.pop(
+    /*Navigator.pop(
         context,
         new MaterialPageRoute(
-            builder: (BuildContext context) => login_page()));
+            builder: (BuildContext context) => login_page()));*/
+    Navigator.of(context).pushReplacement(
+      // the new route
+      MaterialPageRoute(
+        builder: (BuildContext context) => login_page(),
+      ),
+    );
   }
-  _incrementCounter() async {
-    prefs = await SharedPreferences.getInstance();
-  }
+
 
 @override
   Widget build(BuildContext context) {
     return Container(
-      child: _signout(),
+      child: new Text("Logout"),
     );
   }
 }

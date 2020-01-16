@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Padding(padding: EdgeInsets.only(top: 10.0),
                     ),
                     Text(
-                      "Khata Book",
+                      "Oodhaari",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 24.0,
